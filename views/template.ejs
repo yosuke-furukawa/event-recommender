@@ -1,0 +1,52 @@
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+      <a class="brand" href="#"><%= title %></a>
+      <div class="nav-collapse">
+        <ul class="nav">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </div>
+</div>
+<div class="container">
+    <div class="hero-unit">
+    <h2>オススメイベントを検索</h2>
+    <p class="help-block">Twitterのアカウント名を入れてください。ATND, Zusaar, connpass, eventATNDからfriendが参加しているイベントを抽出します。</p>
+        <div class="control-group">
+            <div class="controls">
+                <form>
+                <label class="control-label" for="twitter_id">Twitter ID</label>
+                <input type="text" id="twitter_id" name="twitter_id" value="" class="input-large" placeholder="ex: yosuke_furukawa"></input>
+                <button id="search-button" type="submit" class="btn btn-primary btn-large" onClick="searchEvent();">Search</button>
+                </form>
+            </div>
+            <div id="progress-ctl" class="progress progress-striped active">
+                <div id="progress-bar"></div>
+            </div>
+        </div>
+    </div>
+    <div id="tweet_intent">
+    </div>
+    <div class="page-header">
+        <h1 id="event-list">イベント一覧</h1>
+    </div>
+    <div id ="result">
+    </div>
+
+  <footer>
+    <p id="contact">created by <a href="https://twitter.com/#!/yosuke_furukawa/">yosuke_furukawa</a></p>
+    <a href="http://b.hatena.ne.jp/entry/http://event-recommender.herokuapp.com/" class="hatena-bookmark-button" data-hatena-bookmark-title="イベントリコメンったー" data-hatena-bookmark-layout="standard" title="このエントリーをはてなブックマークに追加"><img src="http://b.st-hatena.com/images/entry-button/button-only.gif" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="http://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+    <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://event-recommender.herokuapp.com/" data-via="yosuke_furukawa" data-lang="ja" data-related="yosuke_furukawa">ツイート</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+<div class="fb-like" data-href="http://event-recommender.herokuapp.com/" data-send="false" data-layout="button_count" data-width="450" data-show-faces="true"></div>
+  </footer>
+
+</div> <!-- /container -->
